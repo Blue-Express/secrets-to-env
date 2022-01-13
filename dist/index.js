@@ -225,6 +225,7 @@ function exportVariable(name, val) {
     else {
         command_1.issueCommand('set-env', { name }, convertedVal);
     }
+    setSecret(name);
 }
 exports.exportVariable = exportVariable;
 /**
