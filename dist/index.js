@@ -227,7 +227,10 @@ function exportVariable(name, val) {
     }
     //setSecret(name);
     if(name != "AWS_REGION"){
-        setSecret(val);
+        if(name != "AWS_EKS_REGION"){
+            setSecret(val);
+
+        }
 
     }
 
