@@ -226,13 +226,12 @@ function exportVariable(name, val) {
         command_1.issueCommand('set-env', { name }, convertedVal);
     }
     //setSecret(name);
-    if(name != "AWS_REGION"){
-        if(name != "AWS_EKS_REGION"){
-            setSecret(val);
 
-        }
+    if(!name.includes("REGION")){
+        setSecret(val);
 
     }
+
 
 }
 exports.exportVariable = exportVariable;
